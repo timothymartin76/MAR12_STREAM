@@ -2,12 +2,21 @@
   <head>
     <meta charset="utf-8">
     <link href="bootstrap-3.3.4-dist/css/bootstrap.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <style>
       body {
-        font: 9px sans-serif;
+        font-family: Lato;
+		font-size: 11px;
         color: #121401;
       }
-      h2 {margin: .1em 0 .1em 0;}
+	  
+	  h2 {
+			  margin: .1em 0 .1em 0;
+			  font-size: 30px;
+			}
+	  
+	  
+	  
       .axis path,
       .axis line {
         fill: none;
@@ -119,8 +128,8 @@
             .attr("class", "x axis")
             .call(yAxis)
 			.append("text") 
-            .attr("x", 165)
-            .attr("dy", "40em") 
+            .attr("y", 365)
+            .attr("dx", "12em") 
             .text("Hour of day");
 			
         var selection = svg.selectAll(".series")
