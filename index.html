@@ -32,8 +32,8 @@
     <script>
     
       var margin = {top: 20, right: 55, bottom: 30, left: 40},
-          width  = 1000 - margin.left - margin.right,
-          height = 500  - margin.top  - margin.bottom;
+          width  = 900 - margin.left - margin.right,
+          height = 420  - margin.top  - margin.bottom;
 
       var x = d3.scale.ordinal()
           .rangeRoundBands([0, width], .1);
@@ -118,8 +118,8 @@
             .attr("class", "x axis")
             .call(yAxis)
 			.append("text") 
-            .attr("x", 175)
-            .attr("dy", "49em") 
+            .attr("x", 165)
+            .attr("dy", "40em") 
             .text("Hour of day");
 			
         var selection = svg.selectAll(".series")
@@ -153,7 +153,7 @@
             .data(varNames.slice().reverse())
           .enter().append("g")
             .attr("class", "legend")
-            .attr("transform", function (d, i) { return "translate(-685," + i * 20 + ")"; });
+            .attr("transform", function (d, i) { return "translate(-600," + i * 20 + ")"; });
 
         legend.append("rect")
             .attr("x", width - 10)
@@ -167,7 +167,7 @@
             .attr("y", 6)
             .attr("dy", ".35em")
             .style("text-anchor", "end")
-			.style("font-size", "14px")
+			.style("font-size", "13px")
             .text(function (d) { return d; });
 
         function removePopovers () {
